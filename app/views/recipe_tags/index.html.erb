@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipe Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recipe</th>
+      <th>Tag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipe_tags.each do |recipe_tag| %>
+      <tr>
+        <td><%= recipe_tag.recipe %></td>
+        <td><%= recipe_tag.tag %></td>
+        <td><%= link_to 'Show', recipe_tag %></td>
+        <td><%= link_to 'Edit', edit_recipe_tag_path(recipe_tag) %></td>
+        <td><%= link_to 'Destroy', recipe_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe Tag', new_recipe_tag_path %>

@@ -1,0 +1,2 @@
+module TypeFoodsHelper
+end

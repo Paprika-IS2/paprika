@@ -1,0 +1,2 @@
+module RecipeScoresHelper
+end

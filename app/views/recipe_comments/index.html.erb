@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipe Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Recipe</th>
+      <th>Comment</th>
+      <th>Created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipe_comments.each do |recipe_comment| %>
+      <tr>
+        <td><%= recipe_comment.user %></td>
+        <td><%= recipe_comment.recipe %></td>
+        <td><%= recipe_comment.comment %></td>
+        <td><%= recipe_comment.created %></td>
+        <td><%= link_to 'Show', recipe_comment %></td>
+        <td><%= link_to 'Edit', edit_recipe_comment_path(recipe_comment) %></td>
+        <td><%= link_to 'Destroy', recipe_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe Comment', new_recipe_comment_path %>

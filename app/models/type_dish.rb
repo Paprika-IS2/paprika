@@ -1,0 +1,2 @@
+class TypeDish < ApplicationRecord
+end

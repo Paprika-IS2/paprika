@@ -1,0 +1,2 @@
+module TypeDishesHelper
+end

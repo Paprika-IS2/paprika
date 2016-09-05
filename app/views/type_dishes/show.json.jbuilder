@@ -1,0 +1,1 @@
+json.partial! "type_dishes/type_dish", type_dish: @type_dish

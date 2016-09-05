@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ingredient.name %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @ingredient.photo %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @ingredient.info %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @ingredient.calories %>
+</p>
+
+<p>
+  <strong>Fat calories:</strong>
+  <%= @ingredient.fat_calories %>
+</p>
+
+<p>
+  <strong>Cholesterol:</strong>
+  <%= @ingredient.cholesterol %>
+</p>
+
+<p>
+  <strong>Sodium:</strong>
+  <%= @ingredient.sodium %>
+</p>
+
+<p>
+  <strong>Sugar:</strong>
+  <%= @ingredient.sugar %>
+</p>
+
+<p>
+  <strong>Protein:</strong>
+  <%= @ingredient.protein %>
+</p>
+
+<p>
+  <strong>Carbohydrates:</strong>
+  <%= @ingredient.carbohydrates %>
+</p>
+
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', ingredients_path %>

@@ -1,0 +1,2 @@
+json.extract! ingredient, :id, :name, :photo, :info, :calories, :fat_calories, :cholesterol, :sodium, :sugar, :protein, :carbohydrates, :created_at, :updated_at
+json.url ingredient_url(ingredient, format: :json)

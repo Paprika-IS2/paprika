@@ -1,0 +1,67 @@
+<%= form_for(ingredient) do |f| %>
+  <% if ingredient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
+
+      <ul>
+      <% ingredient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :info %>
+    <%= f.text_area :info %>
+  </div>
+
+  <div class="field">
+    <%= f.label :calories %>
+    <%= f.number_field :calories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fat_calories %>
+    <%= f.number_field :fat_calories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cholesterol %>
+    <%= f.text_field :cholesterol %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sodium %>
+    <%= f.text_field :sodium %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sugar %>
+    <%= f.text_field :sugar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :protein %>
+    <%= f.text_field :protein %>
+  </div>
+
+  <div class="field">
+    <%= f.label :carbohydrates %>
+    <%= f.text_field :carbohydrates %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

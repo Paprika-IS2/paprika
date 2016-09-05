@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @recipe_comment.user %>
+</p>
+
+<p>
+  <strong>Recipe:</strong>
+  <%= @recipe_comment.recipe %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @recipe_comment.comment %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @recipe_comment.created %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_comment_path(@recipe_comment) %> |
+<%= link_to 'Back', recipe_comments_path %>
