@@ -1,3 +1,10 @@
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import 'materialize';
+@import "materialize/extras/nouislider";
+
+// Import other scss
+@import "home";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +20,7 @@
  *= require_tree .
  *= require_self
  */
+
+//= require jquery
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
