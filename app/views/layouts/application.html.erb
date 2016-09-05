@@ -5,9 +5,13 @@
     <%= csrf_meta_tags %>
 
     <%= javascript_include_tag 'application': 'reload' %>
+    
+
   </head>
 
   <body>
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

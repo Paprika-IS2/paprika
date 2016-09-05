@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  devise_for :users
   resources :recipe_comments
   resources :recipe_scores
   resources :recipe_ingredients
@@ -12,5 +15,9 @@ Rails.application.routes.draw do
   resources :type_dishes
   resources :ingredients
   resources :users
+
+  root to: "home#index"
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
