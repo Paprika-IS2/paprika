@@ -48,4 +48,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Using Materialize with SASS
-gem 'materialize-sass'
+gem 'bootstrap-sass', '~> 3.3.1'

@@ -3,3 +3,6 @@
 require_relative 'config/environment'
 
 run Rails.application
+
+require 'sass/plugin/rack'
+use Sass::Plugin::Rack
