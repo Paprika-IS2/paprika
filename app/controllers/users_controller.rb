@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /users
   # GET /users.json
   def index
@@ -58,6 +58,20 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  #ADD for login with Twitter
+  def finish_signup
+    if request.patch? && params[:user] # Revisa si el request es de tipo patch, es decir, llenaron el formulario y lo ingresaron
+      @user = User.find(params[:id])
+ 
+      if @user.update(user_params)
+        sign_in(@user, :bypass => true)
+        redirect_to root_path, notice: 'Hemos guardado tu email correctamente.'
+      else
+        @show_errors = true
+      end
     end
   end
 

@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #Insert parameters of user
   def configure_new_column_to_devise_permitted_parameters
     registration_params = [:name, :lastname, :email, :password, :password_confirmation]
     if params[:action] == 'create'
