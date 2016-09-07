@@ -15,5 +15,12 @@
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <p>
+      <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+      |
+      <%= link_to_unless I18n.locale == :es, "Spanish", locale: :es %>
+    </p>
+
   </body>
 </html>

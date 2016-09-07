@@ -36,3 +36,20 @@
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+
+
+<h1><%= t('hello') %></h1>
+<h1><%= t('devise.confirmations.confirmed') %></h1>
+
+<p><b>I18n.locale:</b>
+  <%= I18n.locale %>
+</p>
+
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissible fade-in"  id="alert-app" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= value %>
+    </div>
+<% end %>
