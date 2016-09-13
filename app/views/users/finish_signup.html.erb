@@ -1,4 +1,4 @@
-<h1>Confirma tu Email</h1>
+<h1><%= t('Confirm_registration_data') %></h1>
  
 <%= form_for(current_user, as: 'user', url: finish_signup_path(current_user)) do |f| %>
   <% if @show_errors && current_user.errors.any? %>
@@ -30,7 +30,7 @@
   </div>
  
   <div>
-    <%= f.submit 'Confirmar' %>
+    <%= f.submit t('confirm') %>
   </div>
  
 <% end %>

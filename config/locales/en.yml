@@ -37,3 +37,13 @@ en:
   update: "Update"
   back: "Back"
   remember_me: "Remember me"
+  changepassword: 'Change my password'
+  cancelaccount: "Cancel my account"
+  are_you_sure: "Are you sure?"
+  characters_minimum: "characters minimum"
+  leave_white_label: "leave blank if you do not want to change"
+  take_current_password: "It takes current password"
+  sign_in_with: "Sign in with"
+  Forgot_your_password: "Forgot your password?"
+  confirm: "Confirm"
+  Confirm_registration_data: "Confirm registration data"

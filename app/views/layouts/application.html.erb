@@ -17,7 +17,7 @@
     <ul >
       <% if user_signed_in? %>
         <li>
-          Usuario: 
+          Usuario:
           <%= current_user.email %>
           <%= link_to t('edit_profile'), edit_user_registration_path %>
           <%= link_to t('logout'), destroy_user_session_path, method: :delete %>

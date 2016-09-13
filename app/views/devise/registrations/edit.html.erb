@@ -23,11 +23,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password, t('newpassword') %> <i>(dejar en blanco si no desea cambiarla)</i><br />
+    <%= f.label :password, t('newpassword') %> <i>(<%= t('leave_white_label')%>)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%= @minimum_password_length%> <%= t('characters_minimum') %></em>
     <% end %>
   </div>
 
@@ -37,7 +37,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password, t('current_password') %> <i>(necesitamos su contraseña actual para confirmar los cambios)</i><br />
+    <%= f.label :current_password, t('current_password') %> <i>(<%= t('take_current_password')%>)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
@@ -48,10 +48,9 @@
 <% end %>
 
 <div>
-    <h3>Cancelar cuenta:</h3>
-<p>¿En realidad quieres irte? <%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "¿Estás seguro?" }, method: :delete %></p>
-
-  </div>
+    <h3><%=t('cancelaccount') %></h3>
+<p><%= button_to t('cancelaccount'), registration_path(resource_name), data: { confirm: t('are_you_sure') }, method: :delete %></p>
+</div>
 
 
 <%= link_to t('back'), :back %>
