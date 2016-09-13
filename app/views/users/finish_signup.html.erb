@@ -11,8 +11,22 @@
   <% end %>
  
   <div>
-    <%= f.label :email %>
+    <%= f.label :name, t('name') %>
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <div>
+    <%= f.label :lastname,t('lastname') %>
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+  <div>
+    <% if not current_user.email_verified? %>
+    <%= f.label :email, t('email') %>
     <%= f.text_field :email, autofocus: true, value: '', placeholder: 'Example: email@me.com' %>
+    <%else%>
+    <%= t('email') %>
+    <%= current_user.email %>
+    <% end%>
+
   </div>
  
   <div>

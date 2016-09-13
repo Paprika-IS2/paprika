@@ -4,17 +4,17 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name, "Nombre: " %><br />
+    <%= f.label :name, t('name') %><br />
     <%= f.text_field :name, autofocus: true  %>
   </div>
 
   <div class="field">
-    <%= f.label :lastname, "Apellido: " %><br />
+    <%= f.label :lastname, t('lastname') %><br />
     <%= f.text_field :lastname, autofocus: true  %>
   </div>
 
   <div class="field">
-    <%= f.label :email, "Correo: " %><br />
+    <%= f.label :email, t('email') %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -23,7 +23,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password, "Contraseña nueva: " %> <i>(dejar en blanco si no desea cambiarla)</i><br />
+    <%= f.label :password, t('newpassword') %> <i>(dejar en blanco si no desea cambiarla)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -32,22 +32,26 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmación de contraseña nueva: " %><br />
+    <%= f.label :password_confirmation, t('password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password, "Contraseña actual:" %> <i>(necesitamos su contraseña actual para confirmar los cambios)</i><br />
+    <%= f.label :current_password, t('current_password') %> <i>(necesitamos su contraseña actual para confirmar los cambios)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Actualizar" %>
-  </div>
+    <%= f.submit t('update') %>
+  </div>  
+
 <% end %>
 
-<h3>Cancelar cuenta:</h3>
-
+<div>
+    <h3>Cancelar cuenta:</h3>
 <p>¿En realidad quieres irte? <%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "¿Estás seguro?" }, method: :delete %></p>
 
-<%= link_to "Atras", :back %>
+  </div>
+
+
+<%= link_to t('back'), :back %>

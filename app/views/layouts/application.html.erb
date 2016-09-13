@@ -19,15 +19,15 @@
         <li>
           Usuario: 
           <%= current_user.email %>
-          <%= link_to "Editar perfil", edit_user_registration_path %>
-          <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+          <%= link_to t('edit_profile'), edit_user_registration_path %>
+          <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
         </li>
       <%else%>
         <li>
-          <%= link_to "Iniciar sesión", new_user_session_path%>
+          <%= link_to t('login'), new_user_session_path%>
         </li>
         <li>
-          <%= link_to "Crear cuenta", new_user_registration_path%>
+          <%= link_to t('signin'), new_user_registration_path%>
         </li>
       <% end%>
     </ul>
