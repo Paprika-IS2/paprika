@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     resources :type_foods
     resources :type_dishes
     resources :ingredients
-    resources :usersq
+    resources :users
   end
   resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
