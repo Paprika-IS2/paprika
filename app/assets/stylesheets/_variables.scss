@@ -1,0 +1,17 @@
+/* Colors */
+$white: #FFF;
+$black: #000;
+$blue: #72e2fd;
+$dark-blue: #203F88;
+$dark-gray: #333;
+$light-blue: #C8F7FF;
+
+/* Fonts */
+$font-LatoB: 'Lato-Bold', times;
+$font-LatoH: 'Lato-Hairline', times;
+$font-LatoS: 'Lato-Semibold', times;
+$font-LatoT: 'Lato-Thin', times;
+
+/* Fonts sizes */
+$font-size-base: 16px;
+$font-size-small:ceil(($font-size-base * 0.85)); // ~12px

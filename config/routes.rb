@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
+  get 'static_pages/aboutUs'
   scope '(:locale)' do
     root :to => 'home#index'
     get 'home/index'
   end
-
   devise_for :users
   resources :recipe_comments
   resources :recipe_scores

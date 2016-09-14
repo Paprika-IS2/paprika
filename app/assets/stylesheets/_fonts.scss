@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Lato-Bold';
+  src: asset-url('Lato-Bold.eot');
+  src: asset-url('Lato-Bold.woff2') format('woff2'),
+       asset-url('Lato-Bold.woff') format('woff'),
+       asset-url('Lato-Bold.ttf') format('truetype'),
+       asset-url('Lato-Bold.svg#Lato-Bold') format('svg'),
+       asset-url('Lato-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Hairline';
+  src: asset-url('Lato-Hairline.eot');
+  src: asset-url('Lato-Hairline.woff2') format('woff2'),
+       asset-url('Lato-Hairline.woff') format('woff'),
+       asset-url('Lato-Hairline.ttf') format('truetype'),
+       asset-url('Lato-Hairline.svg#Lato-Hairline') format('svg'),
+       asset-url('Lato-Hairline.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Semibold';
+  src: asset-url('Lato-Semibold.eot');
+  src: asset-url('Lato-Semibold.woff2') format('woff2'),
+       asset-url('Lato-Semibold.woff') format('woff'),
+       asset-url('Lato-Semibold.ttf') format('truetype'),
+       asset-url('Lato-Semibold.svg#Lato-Semibold') format('svg'),
+       asset-url('Lato-Semibold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Thin';
+  src: asset-url('Lato-Thin.eot');
+  src: asset-url('Lato-Thin.woff2') format('woff2'),
+       asset-url('Lato-Thin.woff') format('woff'),
+       asset-url('Lato-Thin.ttf') format('truetype'),
+       asset-url('Lato-Thin.svg#Lato-Thin') format('svg'),
+       asset-url('Lato-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
