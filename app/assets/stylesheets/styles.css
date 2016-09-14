@@ -1,0 +1,421 @@
+/* Elimina el margin y padding de todas las etiquetas */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Fuente del sitio web y fondo negro */
+
+body {
+    background: #000;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Hace que no quede espacio en la parte de abajo de una imagen */
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Restaura los valores por defecto de la etiqueta p */
+
+p {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+
+/* Hace que la etiqueta a no tenga el subrayado de texto */
+
+a {
+    text-decoration: none;
+}
+
+
+/* Hace que las listas no tengan decoracion */
+
+ul {
+    list-style: none;
+}
+
+
+/* Restaura los valores por defecto de la etiqueta ol */
+
+ol {
+    display: block;
+    margin: 0 15px;
+    padding-left: 0px;
+}
+
+ol li {
+    padding: 5px 10px;
+}
+
+
+/* Titulo del sitio web */
+
+.banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px 10px 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+    font-family: 'Lora', serif;
+    font-weight:bold;
+    color: #cc1400;
+    float: left;
+}
+
+.banner.game {
+    font-family: 'VT323', cursive;
+    font-size: 35px;
+}
+
+.menu.game,
+.card-title.game,
+.title.game {
+    font-family: 'VT323', cursive;
+}
+
+
+/* Para el link del banner, el titulo es un link que lleva a index.html */
+
+.banner a,
+.banner a:visited {
+    color: #cc1400;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    text-decoration: none;
+}
+
+/* Espacio en blanco, se usa para el espacio que deja el banner al inicio */
+
+.empty {
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px 10px 10px 10px;
+    background: rgba(0, 0, 0, 0);
+    font-family: 'Pacifico', cursive;
+    opacity: 0;
+}
+
+.empty.game {
+    font-family: 'VT323', cursive;
+    font-size: 35px;
+}
+
+
+/* Pie de pagina */
+
+.footer {
+    color: #0ee1c8;
+    padding: 10px 10px 10px 10px;
+    font-size: 10px;
+    background: #000;
+    text-align: center;
+    color: #9b9b9b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+
+/* Links en el pie de pagina */
+
+.footer a {
+    padding: 0 10px 0 10px;
+    color: #9b9b9b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+
+/* Cuando se pasa el mouse sobre los links del pie de pagina */
+
+.footer a:hover {
+    color: #cc1400;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+/* Titulo de las paginas */
+
+.title {
+    font-family: 'Lora', serif;
+    padding: 16px 0 18px 0;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    float: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Contenido de las paginas */
+
+.content {
+    background: url(../images/city.jpg);
+    background-size: contain;
+}
+
+
+/*Tarjetas usadas para mostrar imagenes */
+
+.card,
+.horizontal-card {
+    background: #fff;
+    box-shadow: 0px 2px 10px #7a7a7a;
+    float: left;
+    margin: 30px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.horizontal-card {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+/* Utilizado para centrar las tarjetas dentro del contenedor */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    float: none;
+}
+
+
+/* Maximo ancho de imagen en tarjeta */
+
+.card-container .image {
+    float: none;
+    max-width: 420px;
+}
+
+
+/* Cuando la tarjeta es horizontal, la imagen tiene la mitad de la tarjeta y el contenido la otra mitad */
+
+.horizontal-card-content {
+    width: 50%;
+    float: left;
+}
+
+
+/* Titulo de la tarjeta */
+
+.card-title {
+    background-color: #e8ecec;
+    color: #282828;
+    font-size: 25px;
+    width: 100%;
+    float: none;
+    margin: 0;
+    text-align: center;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+
+/* Texto de la tarjeta */
+
+.card-text {
+    width: 100%;
+    padding: 1% 6% 4% 6%;
+    margin: 0;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+/* Contenedor de elementos a mostrar en el contenido de la pagina */
+
+.container {
+    padding-bottom: 50px;
+    margin: 0 10%;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    background-color: rgba( 255, 255, 255, 0.8);
+}
+
+
+/* Contenedor de elementos a mostrar en el contenido de la pagina, este contenedor no tiene margen */
+
+.container-full {
+    padding: 30px 10%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    background-color: rgba( 255, 255, 255, 0.8);
+}
+
+
+/* Contenedor de imagenes en la pagina de inicio */
+
+.collage {
+    float: none;
+    overflow: hidden;
+    _overflow: visible;
+    _zoom: 1;
+}
+
+
+/* Div que contiene imagen que direcciona a otras paginas */
+
+.image {
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+
+/* Hacer que la imagen ocupe todo el div */
+
+.image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Recuadro negro que se muestra cuando se pasa el mouse sobre imagen */
+
+
+/* Tiene el atributo opacity: 0 que sera cambiado en hover */
+
+.image:after {
+    position: absolute;
+    opacity: 0;
+    transition: all .5s;
+    content: attr(data-content);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+
+/* Al pasar el mouse se cambia el atributo opacity a 1 */
+
+.image:hover:after {
+    opacity: 1;
+}
+
+
+/* Decoracion de la etiqueta -a- cuando esta en un contenedor */
+
+.container a,
+.container a:visited,
+.container a:active {
+    color: #000;
+    transition: color .4s;
+}
+
+.container a:hover {
+    text-decoration: none;
+    color: #0ee1c8;
+}
+
+
+/* Decoracion de la etiqueta -a- cuando esta en una tarjeta horizontal */
+
+.horizontal-card ul li ul a,
+.card ul li ul a {
+    color: #3d3d3d;
+}
+
+
+/* Decoracion de la lista cuando esta en una tarjeta horizontal */
+
+.horizontal-card ul,
+.card ul {
+    display: block;
+    margin: 10px 0;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+
+/* Usado en las paginas que tienen proyectos */
+
+
+/* Hace que los links para retroceder o avanzar ocupen cada uno la mitad del div */
+
+.arrow-link {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+
+/* Contiene los links con flechas para avanzar o retroceder */
+
+.arrow-link-container {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
+
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}

@@ -1,0 +1,145 @@
+/* Autora: Laura Viviana Alvarez Carvajal */
+
+
+/* Smartphones */
+
+@media screen and ( max-width: 480px) {
+    /* Disminuye la fuente */
+    body,
+    .card-text {
+        font-size: 17px;
+    }
+    .banner,
+    .empty,
+    .title {
+        font-size: 25px;
+    }
+    .menu {
+        font-size: 20px;
+    }
+    .collage .image:after {
+        font-size: 35px;
+    }
+    .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .card .image:after {
+        font-size: 25px;
+    }
+    /* Hace que las imagenes de la pagina de inicio ocupen todo el ancho */
+    .collage-image {
+        width: 100%;
+        height: 200px;
+    }
+    /* Muestra las tarjetas en columna */
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card img {
+        max-width: 100%;
+    }
+    .card {
+        margin: 20px 0;
+    }
+    /* Quita el margen de los contenedores y del titulo */
+    .card-container,
+    .container,
+    title,
+    .horizontal-card {
+        margin: 0;
+    }
+    /* Hace que las tarjetas horizontales se muestren como verticales */
+    .horizontal-card-content {
+        width: 100%;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Tablets, iPad */
+
+@media screen and ( min-width: 480px) and ( max-width: 768px) {
+    /* Disminuye la fuente */
+    body {
+        font-size: 20px;
+    }
+    .banner,
+    .empty {
+        font-size: 25px;
+    }
+    .menu {
+        font-size: 20px;
+    }
+    .menu li ul li {
+        font-size: 0.8em;
+    }
+    .collage .image:after {
+        font-size: 40px;
+    }
+    .card .image:after {
+        font-size: 22px;
+    }
+    .horizontal-card {
+        margin: 0 30px;
+    }
+    /* Hace que las imagenes de la pagina de inicio ocupen cada una la mitad */
+    /* Disminuye la altura de las imagenes en la pagina de inicio */
+    .collage-image {
+        width: 50%;
+        height: 300px;
+    }
+    /* Quita el margen de los contenedores y del titulo */
+    .card-container,
+    .container,
+    title {
+        margin: 0;
+    }
+    /* Hace que las tarjetas horizontales se muestren como verticales */
+    .horizontal-card-content,
+    .card-content {
+        width: 100%;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Portatiles y pantalla de escritorio */
+
+@media screen and ( min-width: 768px) {
+    /* Fuentes para estas pantallas */
+    body {
+        font-size: 20px;
+        background-size: 100%;
+    }
+    .menu {
+        font-size: 25px;
+    }
+    .banner,
+    .empty {
+        font-size: 30px;
+    }
+    .collage .image:after {
+        font-size: 50px;
+    }
+    .card .image:after {
+        font-size: 25px;
+    }
+    /* Hace que las imagenes de la pagina de inicio ocupen cada una la mitad */
+    .collage-image {
+        background-position: center;
+        width: 50%;
+        height: 400px;
+    }
+    .title {
+        margin: 0 10%;
+    }
+}

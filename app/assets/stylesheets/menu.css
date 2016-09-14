@@ -1,0 +1,104 @@
+/* Autora: Laura Viviana Alvarez Carvajal */
+
+
+/* Menu desplegable de la pagina */
+
+.menu {
+    list-style: none;
+    background: rgba( 0, 0, 0, 1);
+    z-index: 90;
+    transition: background 1s;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    margin: 0 10%;
+}
+
+
+/* Modifica los elementos -li- que estan en el menu fijo */
+
+.menu > li {
+    float: left;
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+
+/* Crea una linea cuando se pasa el mouse sobre el menu fijo */
+
+.menu >li:hover {
+    border-bottom: 2px solid #0ee1c8;
+}
+
+
+/* Menu desplegable, opacity: 0 que sera modificada al pasar el mouse */
+
+.menu li ul {
+    transition: opacity 1s;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    background: rgba( 0, 0, 0, 0.99);
+    box-shadow: 0px 2px 8px #141414;
+    z-index: 90;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+
+/* Menu desplegable, cambia el atributo opacity a 1 para que se vea el menu desplegable */
+
+.menu li:hover > ul {
+    opacity: 1;
+    height: auto;
+    border-bottom: 2px solid #0ee1c8;
+}
+
+
+/* Oscurece el menu fijo al pasar el mouse */
+
+.menu:hover {
+    background: rgba( 0, 0, 0, 0.9);
+}
+
+
+/* Hace que los elementos del menu desplegable tengan por lo menos el ancho del padre */
+
+.menu li ul li {
+    position: relative;
+    min-width: 100%;
+}
+
+
+/* menu-item es la clase que tienen los links -a- en el menu */
+
+
+/* Describe el comportamiento de los links en el menu */
+
+.menu-item:link,
+.menu-item:visited {
+    display: block;
+    transition: color 0.8s;
+    color: #0ee1c8;
+}
+
+.menu-item:hover,
+.menu-item:active {
+    color: #fff;
+}
+
+.menu li > .menu-item {
+    padding: .5em .9em;
+}
+
+
+/* Hace que el texto adicional en el menu tenga el mismo formato que los links -a- */
+
+.menu-text {
+    padding: .5em 0;
+    color: #0ee1c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

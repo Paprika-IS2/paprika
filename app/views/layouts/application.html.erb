@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<%= stylesheet_link_tag "styles" %>
+<%= stylesheet_link_tag "responsive" %>
+<%= stylesheet_link_tag "menu" %>
 <html>
   <head>
-    <title>PaprikaWeb</title>
+    <title>Paprika</title>
     <%= csrf_meta_tags %>
 
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto" rel="stylesheet">
 
   </head>
 
   <body>
+    <!-- Banner estático de la página -->
+    <div class="banner">
+        <%= link_to "Paprika", home_index_path %>
+
+        <!--
+        <div class="container">
+        	<div class="row">
+                <div class="col-md-6">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+      -->
+
+      <%= link_to "Contact us", new_contact_path, class: "btn btn-default"%>
+
+        <% if user_signed_in? %>
+
+            <%= link_to t('edit_profile'), edit_user_registration_path, class: "btn btn-default" %>
+            <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "btn btn-default" %>
+          
+        <%else%>
+        <%= link_to t('login'), new_user_session_path, class: "btn btn-default" %>
+        <%= link_to t('signin'), new_user_registration_path, class: "btn btn-default"%>
+        <% end%>
+    </div>
+
+    <!-- Espacio usado para que el banner no cubra el menú al principio -->
+    <div class="empty">
+        <center>Paprika</center>
+    </div>
+
+
+
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <ul >
+
+
+
+    <div class="container">
       <% if user_signed_in? %>
-        <li>
           Usuario:
           <%= current_user.email %>
-          <%= link_to t('edit_profile'), edit_user_registration_path %>
-          <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
-        </li>
-      <%else%>
-        <li>
-          <%= link_to t('login'), new_user_session_path%>
-        </li>
-        <li>
-          <%= link_to t('signin'), new_user_registration_path%>
-        </li>
       <% end%>
-    </ul>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
-
-    <p>
-      <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
-      |
-      <%= link_to_unless I18n.locale == :es, "Spanish", locale: :es %>
-    </p>
-
+    <div class="footer">
+      <p>
+        <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+        |
+        <%= link_to_unless I18n.locale == :es, "Spanish", locale: :es %>
+      </p>
+    </div>
   </body>
 </html>
