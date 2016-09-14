@@ -41,6 +41,8 @@
 
       <%= link_to "Contact us", new_contact_path, class: "btn btn-default"%>
 
+      <%= link_to "About us", 'static_pages/aboutUs', class: "btn btn-default"%>
+
         <% if user_signed_in? %>
 
             <%= link_to t('edit_profile'), edit_user_registration_path, class: "btn btn-default" %>
