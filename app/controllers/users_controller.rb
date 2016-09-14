@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /users
   # GET /users.json
   def index
@@ -61,6 +61,20 @@ class UsersController < ApplicationController
     end
   end
 
+  #ADD for login with Twitter
+  def finish_signup
+    if request.patch? && params[:user] # Revisa si el request es de tipo patch, es decir, llenaron el formulario y lo ingresaron
+      @user = User.find(params[:id])
+ 
+      if @user.update(user_params)
+        sign_in(@user, :bypass => true)
+        redirect_to root_path, notice: 'Hemos guardado tu email correctamente.'
+      else
+        @show_errors = true
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -69,6 +83,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :lastname)
+      params.require(:user).permit(:name, :lastname, :password, :email, :created)
     end
 end

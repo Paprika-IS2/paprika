@@ -29,6 +29,10 @@ gem 'jbuilder', '~> 2.5'
 
 #gem install by project
 gem 'devise'
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem 'rails_12factor',group: :production
 
 # Use for contact us
 gem 'mail_form'
