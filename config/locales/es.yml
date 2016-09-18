@@ -1,5 +1,6 @@
 es:
   hello: "Hola mundo"
+  user: "Usuario"
   name: "Nombre "
   lastname: "Apellido "
   email: "Correo "
@@ -7,6 +8,7 @@ es:
   password_confirmation: "Confirmación de contraseña "
   newpassword: "Nueva contraseña "
   current_password: "Contraseña actual"
+  update_password: "Actualizar contraseña"
   create_accout: "Crear cuenta"
   join_paprika: "Unete a Paprika"
   edit_profile: "Editar Perfil"

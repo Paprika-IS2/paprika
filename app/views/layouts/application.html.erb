@@ -18,8 +18,9 @@
   <body>
     <!-- Banner estático de la página -->
     <div class="banner">
-        <%= link_to "Paprika", home_index_path %>
+        <%= link_to "Paprika   ", home_index_path %>
 
+        
         <!--
         <div class="container">
         	<div class="row">
@@ -41,13 +42,13 @@
 
       <%= link_to "Contact us", new_contact_path, class: "btn btn-default"%>
 
-      <%= link_to "About us", 'static_pages/aboutUs', class: "btn btn-default"%>
+      <%= link_to "About us", '/static_pages/aboutUs', class: "btn btn-default"%>
 
         <% if user_signed_in? %>
+            <%= t('user')%>  :  <%=current_user.email %>
 
             <%= link_to t('edit_profile'), edit_user_registration_path, class: "btn btn-default" %>
-            <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "btn btn-default" %>
-          
+            <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "btn btn-default" %>          
         <%else%>
         <%= link_to t('login'), new_user_session_path, class: "btn btn-default" %>
         <%= link_to t('signin'), new_user_registration_path, class: "btn btn-default"%>
@@ -67,10 +68,7 @@
 
 
     <div class="container">
-      <% if user_signed_in? %>
-          Usuario:
-          <%= current_user.email %>
-      <% end%>
+     
       <%= yield %>
     </div>
 

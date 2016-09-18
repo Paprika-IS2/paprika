@@ -21,6 +21,7 @@
 
 en:
   hello: "Hello world"
+  user: "User"
   name: "Name"
   lastname: "Lastname "
   email: "Email "
@@ -29,6 +30,7 @@ en:
   newpassword: "New password "
   create_accout: "Create an account"
   current_password: "Current password"
+  update_password: "Update password"
   join_paprika: "Join Paprika"
   edit_profile: "Edit profile"
   logout: "Log out"
