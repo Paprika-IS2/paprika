@@ -36,6 +36,9 @@ gem 'rails_12factor',group: :production
 
 # Use for contact us
 gem 'mail_form'
+# Use for APIs
+gem 'active_model_serializers'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
