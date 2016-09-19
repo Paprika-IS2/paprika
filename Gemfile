@@ -38,6 +38,8 @@ gem 'rails_12factor',group: :production
 gem 'mail_form'
 # Use for APIs
 gem 'active_model_serializers'
+# Use for paginate API
+gem 'will_paginate'
 
 
 group :development, :test do
