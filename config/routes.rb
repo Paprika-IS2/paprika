@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     namespace :api, defaults: { format: :json } do
         namespace :v1 do
             resources :users, :only => [:show, :index]
+            get 'login' => 'users#login'
+            resources :recipes, :only => [:show, :index]
         end
     end
 
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
     resources :recipe_scores
     resources :recipe_ingredients
     resources :recipe_tags
+    resources :recipes
     resources :tags
     resources :followings
     resources :favorites
@@ -27,7 +30,7 @@ Rails.application.routes.draw do
     resources :type_dishes
     resources :ingredients
     resources :users
+    resources :contacts, only: [:new, :create]
   end
-  resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

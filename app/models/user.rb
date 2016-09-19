@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :identity, :dependent=> :delete_all
 
   validates :auth_token, uniqueness: true
+
+  serialize :recipes
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
     identity = Identity.find_for_oauth(auth)
